@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MeuJogo - Jogo Online RPG</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Rajdhani:wght@400;500;600;700&family=Exo+2:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== BARRA TOPO ===== -->
+  <div id="barra-topo">
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Notícias</a></li>
+        <li><a href="#">Hall da Fama</a></li>
+        <li><a href="#">Contato</a></li>
+      </ul>
+    </nav>
+    <div class="barra-topo-direita">
+      <div class="idiomas">
+        <!-- Substituir pelos SVGs reais das bandeiras -->
+        <span title="Português" style="font-size:18px; cursor:pointer;">🇧🇷</span>
+        <span title="English"   style="font-size:18px; cursor:pointer; opacity:0.5;">🇺🇸</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== HEADER ===== -->
+  <header id="header">
+    <a href="#" class="logo">
+      <div class="logo-img-placeholder">LOGO</div>
+      <!-- Quando houver logo real: <img src="assets/logo.png" alt="Logo" style="height:54px;"> -->
+      <span class="logo-texto">SIXNSJ GAME</span>
+    </a>
+
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Notícias</a></li>
+        <li><a href="#">Hall da Fama</a></li>
+        <li><a href="#">Contato</a></li>
+      </ul>
+    </nav>
+
+    <div class="social-header">
+      <a href="#" title="Twitter">𝕏</a>
+      <a href="#" title="Facebook">f</a>
+      <a href="#" title="YouTube">▶</a>
+      <a href="#" title="Discord">🎮</a>
+    </div>
+
+    <a href="#" class="btn-login-topo" onclick="abrirModal(event)">Entrar</a>
+
+    <div class="menu-mobile" onclick="alert('Menu mobile aqui')">
+      <span></span><span></span><span></span>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section id="hero">
+    <video class="hero-video" autoplay muted loop playsinline>
+      <source src="/fotosVideos/videoInicial.mp4" type="video/mp4">
+      </video>
+        
+    <div class="hero-overlay"></div>
+
+    <div class="hero-conteudo">
+      <h1>SIXNSJ GAME</h1>
+      <p>
+        Embarque em uma aventura cheia de enigmas. Desenvolva suas habilidades,
+        escolha seu caminho e torne-se uma lenda.
+      </p>
+      <a href="#" class="btn-cadastro" onclick="abrirModal(event, 'cadastro')">
+        Cadastre-se Grátis
+      </a>
+    </div>
+  </section>
+
+  <!-- ===== NOTÍCIAS DESTAQUE ===== -->
+  <section id="noticias-destaque">
+    <div class="noticias-destaque-grid">
+
+      <!-- Card grande (destaque) -->
+      <article class="noticia-card destaque">
+        <!-- Imagem real: <img class="noticia-img" src="assets/news/noticia1.jpg" alt="Título"> -->
+        <div class="noticia-img-placeholder" style="height:320px;">Imagem da Notícia Destaque<br>(sua imagem aqui)</div>
+        <div class="noticia-info">
+          <div class="noticia-data">01/04/2026</div>
+          <h3>Título da Notícia em Destaque</h3>
+        </div>
+      </article>
+
+      <!-- Cards menores -->
+      <article class="noticia-card">
+        <div class="noticia-img-placeholder" style="height:140px;">Imagem</div>
+        <div class="noticia-info">
+          <div class="noticia-data">30/03/2026</div>
+          <h3>Título da Segunda Notícia</h3>
+        </div>
+      </article>
+
+      <article class="noticia-card">
+        <div class="noticia-img-placeholder" style="height:140px;">Imagem</div>
+        <div class="noticia-info">
+          <div class="noticia-data">28/03/2026</div>
+          <h3>Título da Terceira Notícia</h3>
+        </div>
+      </article>
+
+      <article class="noticia-card">
+        <div class="noticia-img-placeholder" style="height:140px;">Imagem</div>
+        <div class="noticia-info">
+          <div class="noticia-data">25/03/2026</div>
+          <h3>Título da Quarta Notícia</h3>
+        </div>
+      </article>
+
+      <article class="noticia-card">
+        <div class="noticia-img-placeholder" style="height:140px;">Imagem</div>
+        <div class="noticia-info">
+          <div class="noticia-data">22/03/2026</div>
+          <h3>Título da Quinta Notícia</h3>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ===== ÚLTIMAS NOTÍCIAS ===== -->
+  <section id="ultimas-noticias">
+    <h2 class="secao-titulo">ÚLTIMAS NOTÍCIAS</h2>
+    <div class="noticias-lista">
+
+      <article class="noticia-card">
+        <div class="noticia-img-placeholder" style="height:160px;">Imagem</div>
+        <div class="noticia-info">
+          <div class="noticia-data">01/04/2026</div>
+          <h3>Título da Notícia Um</h3>
+        </div>
+      </article>
+
+      <article class="noticia-card">
+        <div class="noticia-img-placeholder" style="height:160px;">Imagem</div>
+        <div class="noticia-info">
+          <div class="noticia-data">30/03/2026</div>
+          <h3>Título da Notícia Dois</h3>
+        </div>
+      </article>
+
+      <article class="noticia-card">
+        <div class="noticia-img-placeholder" style="height:160px;">Imagem</div>
+        <div class="noticia-info">
+          <div class="noticia-data">28/03/2026</div>
+          <h3>Título da Notícia Três</h3>
+        </div>
+      </article>
+
+      <article class="noticia-card">
+        <div class="noticia-img-placeholder" style="height:160px;">Imagem</div>
+        <div class="noticia-info">
+          <div class="noticia-data">25/03/2026</div>
+          <h3>Título da Notícia Quatro</h3>
+        </div>
+      </article>
+
+    </div>
+    <a href="#" class="btn-ver-todas">Ver Todas as Notícias</a>
+  </section>
+
+  <!-- ===== BEM-VINDO ===== -->
+  <section style="position:relative; overflow:hidden;">
+    <div class="bg-glow" style="width:600px;height:600px;background:rgba(200,16,46,0.06);top:-200px;left:-200px;"></div>
+    <div id="bem-vindo">
+      <div class="bem-vindo-texto">
+        <div class="linha-deco"></div>
+        <div class="label">Bem-vindo ao</div>
+        <h2>SIXNSJ GAME</h2>
+        <div class="subtitulo">AVENTURE-SE NESSA JORNADA</div>
+        <p>
+          SIXNSJ GAME é um browser game de RPG onde você cria seu personagem,
+          desenvolve habilidades únicas e traça seu próprio caminho para se
+          tornar o mais poderoso do mundo. Junte-se a milhares de jogadores!
+        </p>
+        <a href="#" class="btn-cadastro" onclick="abrirModal(event, 'cadastro')">Crie sua Conta</a>
+      </div>
+
+      <div class="bem-vindo-imagens">
+        <!-- Substituir pelas imagens reais dos personagens -->
+        <div class="img-destaque-placeholder grande">Six<br></div>
+        <div class="img-destaque-placeholder medio">Personagem 2<br>(sua imagem)</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== VILAS / FACÇÕES ===== -->
+  <section id="vilas">
+    <div class="vilas-inner">
+      <h2 class="secao-titulo" style="margin-bottom:0;">ESCOLHA SUA FACÇÃO</h2>
+
+      <div class="vilas-row">
+        <div class="vila-item">
+          <div class="vila-circulo">Facção 1</div>
+          <span class="vila-nome">Facção 1</span>
+        </div>
+        <div class="vila-item">
+          <div class="vila-circulo">Facção 2</div>
+          <span class="vila-nome">Facção 2</span>
+        </div>
+        <div class="vila-item">
+          <div class="vila-circulo">Facção 3</div>
+          <span class="vila-nome">Facção 3</span>
+        </div>
+        <div class="vila-item">
+          <div class="vila-circulo">Facção 4</div>
+          <span class="vila-nome">Facção 4</span>
+        </div>
+      </div>
+
+      <div class="vilas-row">
+        <div class="vila-item">
+          <div class="vila-circulo">Facção 5</div>
+          <span class="vila-nome">Facção 5</span>
+        </div>
+        <div class="vila-item">
+          <div class="vila-circulo">Facção 6</div>
+          <span class="vila-nome">Facção 6</span>
+        </div>
+        <div class="vila-item">
+          <div class="vila-circulo">Facção 7</div>
+          <span class="vila-nome">Facção 7</span>
+        </div>
+        <div class="vila-item">
+          <div class="vila-circulo">Facção 8</div>
+          <span class="vila-nome">Facção 8</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== HALL DO JOGADOR ===== -->
+  <section id="hall-jogador">
+    <div class="hall-imagem">
+      <!-- Imagem real: <img src="assets/personagens/destaque.png" alt="Personagem em destaque" style="width:240px;"> -->
+      <div class="personagem-img-placeholder">Sua imagem<br>aqui</div>
+    </div>
+
+    <div class="hall-info">
+      <div class="label">Hall da Fama — Destaque</div>
+      <h3>Nome do Personagem</h3>
+      <div class="hall-cargo">[GM] NomeDoJogador — Título do Cargo</div>
+      <div class="hall-stats">
+        <div class="stat-item">
+          <div class="stat-valor">60</div>
+          <div class="stat-label">Level</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-valor">1.230</div>
+          <div class="stat-label">Vitórias</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-valor">42</div>
+          <div class="stat-label">Missões</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PERSONAGENS ===== -->
+  <section id="personagens">
+    <div class="personagens-inner">
+      <div class="personagens-imgs">
+        <!-- Imagens reais: <img src="assets/personagens/p2.png" alt=""> -->
+        <div class="img-destaque-placeholder medio">Personagem A<br>(sua imagem)</div>
+        <div class="img-destaque-placeholder grande">Personagem B<br>(sua imagem)</div>
+      </div>
+
+      <div class="personagens-texto">
+        <div class="linha-deco"></div>
+        <div class="label">Escolha seu</div>
+        <h2>PERSONAGEM</h2>
+        <p>
+          Você tem liberdade total para personalizar seu personagem.
+          Crie combinações únicas de habilidades, invocações, clãs e
+          elementos para montar uma build imbatível.
+        </p>
+        <a href="#" class="btn-secundario">Ver Todos os Personagens</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== REDES SOCIAIS ===== -->
+  <section id="redes-sociais">
+    <div class="redes-inner">
+      <div class="redes-label">Fique conectado</div>
+      <h2>SIGA NOSSAS REDES</h2>
+      <div class="redes-icones">
+        <a href="#" class="rede-item">
+          <div class="rede-circulo">𝕏</div>
+          <span class="rede-nome">Twitter</span>
+        </a>
+        <a href="#" class="rede-item">
+          <div class="rede-circulo">f</div>
+          <span class="rede-nome">Facebook</span>
+        </a>
+        <a href="#" class="rede-item">
+          <div class="rede-circulo">▶</div>
+          <span class="rede-nome">YouTube</span>
+        </a>
+        <a href="#" class="rede-item">
+          <div class="rede-circulo">📷</div>
+          <span class="rede-nome">Instagram</span>
+        </a>
+        <a href="#" class="rede-item">
+          <div class="rede-circulo">💬</div>
+          <span class="rede-nome">WhatsApp</span>
+        </a>
+        <a href="#" class="rede-item">
+          <div class="rede-circulo">🎮</div>
+          <span class="rede-nome">Discord</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer id="footer">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-logo">
+          <div class="logo">
+            <div class="logo-img-placeholder" style="width:40px;height:40px;font-size:8px;">LOGO</div>
+            <span class="logo-texto" style="font-size:15px;">MEU JOGO</span>
+          </div>
+        </div>
+
+        <nav class="footer-nav">
+          <ul>
+            <li><a href="#">Manual</a></li>
+            <li><a href="#">Notícias</a></li>
+            <li><a href="#">Hall da Fama</a></li>
+            <li><a href="#">Divulgue-nos</a></li>
+            <li><a href="#">Contato</a></li>
+          </ul>
+        </nav>
+
+        <div class="footer-parceiros">
+          <h4>Nossos Jogos</h4>
+          <div class="lista-parceiros">
+            <span>Jogo Alpha</span>
+            <span>Jogo Beta</span>
+            <span>Jogo Gamma</span>
+          </div>
+        </div>
+
+        <div class="footer-idiomas">
+          <span title="Português" style="font-size:22px; cursor:pointer;">🇧🇷</span>
+          <span title="English"   style="font-size:22px; cursor:pointer; opacity:0.4;">🇺🇸</span>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-copy">
+          ©2026 MEU JOGO — TODOS OS DIREITOS RESERVADOS<br>
+          Personagens e conteúdo de autoria própria. Todos os direitos reservados.
+        </div>
+        <div class="footer-links-legais">
+          <a href="#">Termos de Uso</a>
+          <a href="#">Política de Privacidade</a>
+          <a href="#">Regras e Punições</a>
+          <a href="#">Aviso Legal</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== MODAL LOGIN / CADASTRO ===== -->
+  <div class="modal-overlay" id="modal" onclick="fecharModalFora(event)">
+    <div class="modal">
+      <button class="modal-fechar" onclick="fecharModal()">✕</button>
+
+      <div class="modal-tabs">
+        <button class="tab-btn ativo" onclick="mudarTab('login', this)">Entrar</button>
+        <button class="tab-btn"       onclick="mudarTab('cadastro', this)">Cadastrar</button>
+      </div>
+
+      <!-- ABA LOGIN -->
+      <div class="tab-content ativo" id="tab-login">
+        <h3>Acesse sua conta</h3>
+        <div class="campo">
+          <label for="login-email">E-mail ou Usuário</label>
+          <input type="text" id="login-email" placeholder="Digite seu e-mail" />
+        </div>
+        <div class="campo">
+          <label for="login-senha">Senha</label>
+          <input type="password" id="login-senha" placeholder="••••••••" />
+        </div>
+        <div class="captcha-placeholder">[ Código de segurança ]</div>
+        <button class="btn-modal">Acessar</button>
+        <div class="modal-links">
+          <a href="#">Esqueci minha senha</a>
+          <a href="#">Entrar com Facebook</a>
+        </div>
+      </div>
+
+      <!-- ABA CADASTRO -->
+      <div class="tab-content" id="tab-cadastro">
+        <h3>Inicie sua Aventura</h3>
+        <div class="campo">
+          <label for="cad-email">E-mail</label>
+          <input type="email" id="cad-email" placeholder="seu@email.com" />
+        </div>
+        <div class="campo">
+          <label for="cad-email2">Confirmar E-mail</label>
+          <input type="email" id="cad-email2" placeholder="confirme seu e-mail" />
+        </div>
+        <div class="campo">
+          <label for="cad-senha">Senha</label>
+          <input type="password" id="cad-senha" placeholder="••••••••" />
+        </div>
+        <div class="campo">
+          <label for="cad-senha2">Confirmar Senha</label>
+          <input type="password" id="cad-senha2" placeholder="••••••••" />
+        </div>
+        <div class="captcha-placeholder">[ Código de segurança ]</div>
+        <div class="checkbox-campo">
+          <input type="checkbox" id="termos" />
+          <label for="termos">
+            Declaro que li e concordo com os <a href="#">Termos de Uso</a>
+          </label>
+        </div>
+        <button class="btn-modal">Jogar Agora</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function abrirModal(e, aba) {
+      if (e) e.preventDefault();
+      document.getElementById('modal').classList.add('ativo');
+      if (aba) {
+        // Ativa a aba correta
+        const btn = document.querySelector(`.tab-btn:nth-child(${aba === 'cadastro' ? 2 : 1})`);
+        mudarTab(aba, btn);
+      }
+    }
+
+    function fecharModal() {
+      document.getElementById('modal').classList.remove('ativo');
+    }
+
+    function fecharModalFora(e) {
+      if (e.target === document.getElementById('modal')) fecharModal();
+    }
+
+    function mudarTab(aba, btn) {
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('ativo'));
+      document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('ativo'));
+      btn.classList.add('ativo');
+      document.getElementById('tab-' + aba).classList.add('ativo');
+    }
+
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') fecharModal();
+    });
+  </script>
+</body>
+</html>
